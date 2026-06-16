@@ -1,8 +1,8 @@
 cask "sqlab" do
-  version "0.6.2"
-  sha256 "8f51c743d2244368a02658046efb331bb02dd530811d060bdc43f8fb3b7afc5e"
+  version "0.6.3"
+  sha256 "7f6accfdb2149e8da951a8e1cb491c3530115a08471aecc0a11013fc73dacc5a"
 
-  url "https://github.com/fhsgoncalves/sqlab/releases/download/v0.6.2/sqlab-aarch64-apple-darwin.dmg",
+  url "https://github.com/fhsgoncalves/sqlab/releases/download/v0.6.3/sqlab-aarch64-apple-darwin.dmg",
       verified: "github.com/fhsgoncalves/sqlab/"
   name "sq/lab"
   desc "SQL editor written in Rust using GPUI"
@@ -15,8 +15,13 @@ cask "sqlab" do
 
   caveats <<~EOS
     sq/lab is not currently signed or notarized.
-    If macOS blocks the first launch, open System Settings > Privacy & Security
-    and click Open Anyway for sqlab.
+    If macOS reports that sqlab is damaged, reinstall without quarantine:
+
+      brew reinstall --cask --no-quarantine fhsgoncalves/tap/sqlab
+
+    Or remove the quarantine attribute after installation:
+
+      xattr -dr com.apple.quarantine /Applications/sqlab.app
   EOS
 
   zap trash: [
