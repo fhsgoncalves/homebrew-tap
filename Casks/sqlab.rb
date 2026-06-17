@@ -1,8 +1,8 @@
 cask "sqlab" do
-  version "0.6.4"
-  sha256 "668a4654663713941215844395b84ea6173781679cdaebd5b841725a989e5dd2"
+  version "0.7.0"
+  sha256 "d1891a6c45935aa01750b202b73dcbd092176c317e8c137d2406802999566088"
 
-  url "https://github.com/fhsgoncalves/sqlab/releases/download/v0.6.4/sqlab-aarch64-apple-darwin.dmg",
+  url "https://github.com/fhsgoncalves/sqlab/releases/download/v0.7.0/sqlab-aarch64-apple-darwin.dmg",
       verified: "github.com/fhsgoncalves/sqlab/"
   name "sq/lab"
   desc "SQL editor written in Rust using GPUI"
